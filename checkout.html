@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda Virtual | Finalizar compra</title>
+  </head>
+  <body>
+    <h1>Finalizar compra</h1>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <label for="nombre">Nombre y apellido</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" />
+      </fieldset>
+      <fieldset>
+        <legend>Envío</legend>
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion" required />
+        <label for="provincia">Provincia</label>
+        <select id="provincia" name="provincia" required>
+          <option value="">Elegí una provincia</option>
+          <option value="misiones">Misiones</option>
+          <option value="corrientes">Corrientes</option>
+          <option value="buenos-aires">Buenos Aires</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Pago</legend>
+        <input type="radio" id="tarjeta" name="pago" value="tarjeta" required />
+        <label for="tarjeta">Tarjeta</label>
+        <input
+          type="radio"
+          id="transferencia"
+          name="pago"
+          value="transferencia"
+        />
+        <label for="transferencia">Transferencia</label>
+      </fieldset>
+      <input type="checkbox" id="terminos" name="terminos" required />
+      <label for="terminos">Acepto los términos y condiciones</label>
+      <button type="submit">Confirmar compra</button>
+    </form>
+    <a href="index.html">Volver a index</a>
+  </body>
+</html>
