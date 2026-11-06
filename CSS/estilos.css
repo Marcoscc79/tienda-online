@@ -13,6 +13,20 @@ a {
   color: #2563eb;
   text-decoration: none;
 }
+/* ===== Barra de navegación ===== */
+.barra {
+  display: flex;
+  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+  align-items: center;
+}
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
 /* ===== Cabecera ===== */
 header {
   background-color: #0f172a;
@@ -42,10 +56,24 @@ article {
 article img {
   max-width: 100%;
 }
+/* ===== Grilla de productos con Flexbox ===== */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.producto {
+  flex: 1 1 250px;
+  margin-bottom: 0; /* el gap ya se encarga de separar */
+}
 /* ===== Pie ===== */
 footer {
   background-color: #0f172a;
   color: #cbd5e1;
   padding: 1.5rem 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
