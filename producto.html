@@ -21,7 +21,13 @@
       <nav aria-label="Ruta de navegación">
         <a href="index.html">Inicio</a> &gt; Ropa &gt; Remera Básica
       </nav>
-      <article>
+      <article class="producto destacado">
+        <h3>Zapatillas Urbanas</h3>
+        <p>Oferta de la semana</p>
+        <p><strong>$48.900</strong></p>
+      </article>
+      <article class="detalle">
+        <div class="detalle-imagen">
         <figure>
           <img
             src="https://placehold.co/600x450?text=Remera"
@@ -29,6 +35,40 @@
           />
           <figcaption>Remera básica, vista frontal.</figcaption>
         </figure>
+        </div>
+        <div class="detalle-info">
+          <h2>Remera Básica de Algodón</h2>
+          <p>Categoría: Ropa</p>
+          <p><strong>$12.500</strong></p>
+          <p>
+            Una remera cómoda y fresca para todos los días, de algodón peinado.
+          </p>
+          <h3>Características</h3>
+          <ul>
+            <li>Algodón 100%</li>
+            <li>Lavable a máquina</li>
+            <li>Disponible en 3 colores</li>
+          </ul>
+          <form action="#" method="post">
+            <label for="talle">Talle</label>
+            <select id="talle" name="talle" required>
+              <option value="">Elegí un talle</option>
+              <option value="s">S</option>
+              <option value="m">M</option>
+              <option value="l">L</option>
+            </select>
+            <label for="cantidad">Cantidad</label>
+            <input
+              type="number"
+              id="cantidad"
+              name="cantidad"
+              min="1"
+              max="10"
+              value="1"
+              required
+            />
+            <button type="submit">Agregar al carrito</button>
+          </form>
         <h2>Remera Básica de Algodón</h2>
         <p>Categoría: Ropa</p>
         <p><strong>$12.500</strong></p>

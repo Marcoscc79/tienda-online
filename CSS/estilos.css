@@ -25,7 +25,8 @@ a {
 }
 .menu {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column; /* menú vertical */
+  gap: 0.5rem;
 }
 /* ===== Cabecera ===== */
 header {
@@ -58,14 +59,30 @@ article img {
 }
 /* ===== Grilla de productos con Flexbox ===== */
 .productos {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
+  gap: 1.5rem; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 .producto {
   flex: 1 1 250px;
   margin-bottom: 0; /* el gap ya se encarga de separar */
 }
+/* La oferta del día ocupa 2 columnas */
+.producto.destacado {
+  grid-column: span 2;
+  background-color: #eff6ff;
+  border-color: #2563eb;
+}
+.detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+  gap: 2rem;
+  align-items: start;
+}
+
 /* ===== Pie ===== */
 footer {
   background-color: #0f172a;
@@ -76,4 +93,12 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+}
+/* 2. Tableta en adelante */
+@media (min-width: 768px) {
+  .menu {
+    flex-direction: row; /* menú en fila */
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
 }
