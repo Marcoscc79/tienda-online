@@ -4,29 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda Virtual | Contacto</title>
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="CSS/estilos.css" />
   </head>
   <body>
-    <h1>Contacto</h1>
-    <p>¿Tenés una consulta? Escribinos y te respondemos en 24 horas.</p>
-    <form action="#" method="post">
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" required minlength="3" />
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-      <label for="motivo">Motivo</label>
-      <select id="motivo" name="motivo">
-        <option value="consulta">Consulta sobre un producto</option>
-        <option value="reclamo">Reclamo</option>
-        <option value="otro">Otro</option>
-      </select>
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-      <button type="submit">Enviar consulta</button>
-    </form>
-    <a href="index.html">Volver a index</a>
+    <header>
+      <div class="barra">
+        <h1 class="logo">Tienda Virtual</h1>
+        <nav>
+          <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="checkout.html">Finalizar compra</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="formulario">
+      <h1>Contacto</h1>
+      <p>¿Tenés una consulta? Escribinos y te respondemos en 24 horas.</p>
+      <form action="#" method="post" class="formulario">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3" />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="motivo">Motivo</label>
+        <select id="motivo" name="motivo">
+          <option value="consulta">Consulta sobre un producto</option>
+          <option value="reclamo">Reclamo</option>
+          <option value="otro">Otro</option>
+        </select>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <button class="boton" type="submit">Enviar consulta</button>
+      </form>
+    </div>
     <footer>
       <p>&copy; 2026 Tienda Virtual. Posadas, Misiones.</p>
+      <address>
+        <a href="mailto:hola@tiendavirtual.com">hola@tiendavirtual.com</a>
+      </address>
     </footer>
   </body>
 </html>

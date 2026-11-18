@@ -1,41 +1,99 @@
+/* ===== Variables ===== */
+:root {
+  --color-primario: #2563eb;
+  --color-oscuro: #0f172a;
+  --color-fondo: #f8fafc;
+  --color-texto: #1f2937;
+  --color-borde: #e2e8f0;
+  --espacio: 1rem;
+  --radio: 8px;
+}
+
 /* ===== Base ===== */
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  font-family: "Inter", Arial, sans-serif;
+  font-family: system-ui, Arial, sans-serif;
   line-height: 1.6;
-  color: #1f2937;
-  background-color: #f8fafc;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
-  color: #2563eb;
+  color: var(--color-primario);
   text-decoration: none;
 }
 /* ===== Barra de navegación ===== */
 .barra {
   display: flex;
-  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+  flex-direction: column;
   align-items: center;
+  gap: 0.75rem;
 }
 .logo {
-  margin: 0;
+  color: white;
   font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
 }
+
 .menu {
   display: flex;
-  flex-direction: column; /* menú vertical */
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.menu a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.menu a:hover {
+  color: white;
 }
 /* ===== Cabecera ===== */
 header {
-  background-color: #0f172a;
+  background: var(--color-oscuro);
   color: white;
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 header a {
   color: white;
+}
+/* ===== 4. HERO ===== */
+.hero {
+  background: var(--color-oscuro);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  margin: 0 0 1rem;
+}
+.hero p {
+  color: #cbd5e1;
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+}
+.boton {
+  display: inline-block;
+  background: var(--color-primario);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radio);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.boton:hover {
+  background: #1d4ed8;
 }
 nav ul {
   list-style: none; /* sacamos las viñetas */
@@ -44,11 +102,18 @@ nav ul {
 }
 /* ===== Contenido ===== */
 main {
-  padding: 2rem;
+  width: min(calc(100% - 2rem), 1200px);
+  margin-inline: auto;
+  padding: 2rem 0;
+}
+.catalogo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
 }
 article {
   background-color: white;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--color-borde);
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1.5rem;
@@ -57,30 +122,92 @@ article {
 article img {
   max-width: 100%;
 }
-/* ===== Grilla de productos con Flexbox ===== */
+/* ===== Grilla de productos con CSS Grid ===== */
 .productos {
-  /* display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 .producto {
-  flex: 1 1 250px;
-  margin-bottom: 0; /* el gap ya se encarga de separar */
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 0;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
+.producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+.producto img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.producto h3 {
+  margin: 1rem 1rem 0.25rem;
+}
+.producto p {
+  margin: 0 1rem 1rem;
+}
+.precio {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-primario);
+}
+
 /* La oferta del día ocupa 2 columnas */
 .producto.destacado {
-  grid-column: span 2;
   background-color: #eff6ff;
-  border-color: #2563eb;
+  border-color: var(--color-primario);
 }
+/* ===== 6. DETALLE DE PRODUCTO ===== */
 .detalle {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.detalle-info {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--radio);
+  border: 1px solid var(--color-borde);
+}
+
+/* ===== 7. FORMULARIOS ===== */
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  margin-bottom: 1rem;
+}
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-primario);
+  border-color: transparent;
+}
+button {
+  background: var(--color-primario);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: var(--radio);
+  cursor: pointer;
+}
+.formulario {
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 /* ===== Pie ===== */
@@ -94,11 +221,30 @@ footer {
   align-items: center;
   gap: 0.5rem;
 }
-/* 2. Tableta en adelante */
+/* ===== 9. RESPONSIVE ===== */
 @media (min-width: 768px) {
-  .menu {
-    flex-direction: row; /* menú en fila */
-    gap: 1.5rem;
+  header,
+  footer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .barra {
+    flex-direction: row;
     justify-content: space-between;
+  }
+  .detalle {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .catalogo {
+    grid-template-columns: minmax(0, 1fr) 220px;
+    align-items: start;
+  }
+  .producto.destacado {
+    grid-column: span 2;
+  }
+  .hero {
+    padding: 6rem 1rem;
   }
 }

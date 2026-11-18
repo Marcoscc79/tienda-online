@@ -10,7 +10,7 @@
     />
     <link rel="icon" href="img/logo.png" />
     <!-- La línea anterior me agrega el icono de la pestaña del navegador -->
-    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="CSS/estilos.css" />
     <!-- <style>
       h2 {
         color: #0a8514;
@@ -30,73 +30,88 @@
         </nav>
       </div>
     </header>
-    <main>
-      <section>
+    <section class="hero">
+      <h1>Tu tienda de confianza</h1>
+      <p>Los mejores productos, al mejor precio, con envío a todo el país.</p>
+      <a href="producto.html" class="boton">Ver productos</a>
+    </section>
+    <main class="catalogo">
+      <!-- <section>
         <h2 class="estilo-h2-1">Bienvenidos a nuestra tienda</h2>
         <p>Encontrá lo que buscás con envíos a todo el país.</p>
-      </section>
+      </section> -->
       <section>
         <h2>Productos destacados</h2>
+        <p>Descubrí nuestra selección de la semana.</p>
         <div class="productos">
-          <article class="detalle">
+          <article class="producto">
             <a href="producto.html">
-              <div class="detalle-imagen">
               <img
                 src="https://placehold.co/400x300?text=Remera"
-                alt="Remera Básica de
-  Algodón"
+                alt="Remera Básica de Algodón"
               />
-              </div>
             </a>
-            <div class="detalle-info">
-              <h3><a href="producto.html">Remera Básica de Algodón</a></h3>
-              <p>Ropa</p>
-              <p><strong>$12.500</strong></p>
-            </div>
+            <h3><a href="producto.html">Remera Básica de Algodón</a></h3>
+            <p>Ropa</p>
+            <p><strong class="precio">$12.500</strong></p>
+          </article>
+          <article class="producto">
+            <a href="producto.html">
+              <img
+                src="https://placehold.co/400x300?text=Mochila"
+                alt="Mochila Impermeable azul"
+              />
+            </a>
+            <h3><a href="producto.html">Mochila Impermeable</a></h3>
+            <p>Accesorios</p>
+            <p><strong class="precio">$27.300</strong></p>
+          </article>
+          <article class="producto">
+            <a href="producto.html">
+              <img
+                src="https://placehold.co/400x300?text=Smartphone"
+                alt="Smartphone de última generación"
+              />
+            </a>
+            <h3><a href="producto.html">Smartphone de última generación</a></h3>
+            <p>Electrónica</p>
+            <p><strong class="precio">$199.900</strong></p>
+          </article>
+          <article class="producto">
+            <a href="producto.html">
+              <img
+                src="https://placehold.co/400x300?text=Televisor"
+                alt="Televisor 55 pulgadas 4K UHD"
+              />
+            </a>
+            <h3><a href="producto.html">TV 55" 4K</a></h3>
+            <p>Electrónica</p>
+            <p><strong class="precio">$299.900</strong></p>
+          </article>
+          <article class="producto">
+            <a href="producto.html">
+              <img
+                src="https://placehold.co/400x300?text=Laptop"
+                alt="Notebook para juegos de última generación"
+              />
+            </a>
+            <h3><a href="producto.html">Notebook Gaming</a></h3>
+            <p>Electrónica</p>
+            <p><strong class="precio">$399.900</strong></p>
+          </article>
+          <article class="producto">
+            <a href="producto.html">
+              <img
+                src="https://placehold.co/400x300?text=Zapatillas"
+                alt="Zapatillas Urbanas negras de cuero"
+              />
+            </a>
+            <h3><a href="producto.html">Zapatillas Urbanas</a></h3>
+            <p>Calzado</p>
+            <p><strong class="precio">$48.900</strong></p>
           </article>
         </div>
       </section>
-      <div class="productos">
-        <article>
-          <a href="producto.html">
-            <img
-              src="https://placehold.co/400x300?text=Mochila"
-              alt="Mochila Impermeable"
-            />
-          </a>
-          <h3><a href="producto.html">Mochila Impermeable</a></h3>
-          <p>Accesorios</p>
-          <p><strong>$27.300</strong></p>
-        </article>
-      </div>
-      <div class="productos">
-        <article>
-          <a href="producto.html">
-            <img
-              src="https://placehold.co/400x300?text=Smartphone"
-              alt="Smartphone de última generación"
-            />
-          </a>
-          <h3><a href="producto.html">Smartphone de última generación</a></h3>
-          <p>Electrónica</p>
-          <p><strong>$199.900</strong></p>
-        </article>
-      </div>
-      <div class="productos">  
-        <article class="producto destacado">
-          <a href="producto.html">
-            <img
-              src="https://placehold.co/400x300?text=Zapatillas"
-              alt="Zapatillas
-          Urbanas"
-            />
-          </a>
-          <h3><a href="producto.html">Zapatillas Urbanas</a></h3>
-          <p>Calzado</p>
-          <p><strong>$48.900</strong></p>
-        </article>
-      </div>
-      <!-- ...los otros 4 productos con la misma estructura... -->
       <aside>
         <h2>Categorías</h2>
         <ul>
@@ -110,6 +125,9 @@
     </main>
     <footer>
       <p>&copy; 2026 Tienda Virtual. Posadas, Misiones.</p>
+      <address>
+        <a href="mailto:hola@tiendavirtual.com">hola@tiendavirtual.com</a>
+      </address>
     </footer>
     <!-- <h2>Productos destacados</h2>
     <p>Descubrí nuestra selección de la semana.</p>
